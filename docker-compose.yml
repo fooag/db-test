@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  liquibase:
+    image: liquibase/liquibase
+    volumes:
+      - ./db:/liquibase/db
+      - ./liquibase.properties:/liquibase/liquibase.properties
+    profiles:
+      - manual
+
+  postgres:
+    image: postgres:13.5
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: docker
+    volumes:
+      - ./.data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
