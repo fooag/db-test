@@ -2,6 +2,7 @@
 
 ## Initialisieren
 
+- dieses REPO forken und auschecken
 - docker installieren (inkl. docker-compose)
 - Container hochfahren
 
@@ -17,3 +18,7 @@ docker-compose up -d
 
 ## Testaufgabe
 tbd
+
+### Review
+
+- PR mit Änderungen erstellen in dieses Repo
